@@ -3,11 +3,11 @@ let btn = document.getElementById("btn");
 let evaluation = document.querySelector(".evaluation");
 let thankyou = document.querySelector(".thankyou");
 let span = document.getElementById("rating");
+let rating;
 
 for (let i = 0; i < ratings.length; i++) {
 	ratings[i].addEventListener("click", () => {
-		let rating = ratings[i].innerHTML;
-		console.log("hi");
+		rating = ratings[i].innerHTML;
 
 		for (let i = 0; i < ratings.length; i++) {
 			ratings[i].classList.contains("selected");
@@ -19,7 +19,11 @@ for (let i = 0; i < ratings.length; i++) {
 }
 
 btn.addEventListener("click", () => {
-	evaluation.style.display = "none";
-	thankyou.style.display = "block";
-	span.innterHTML = rating;
+	if (rating) {
+		evaluation.style.display = "none";
+		thankyou.style.display = "grid";
+		span.innerHTML = rating;
+	} else {
+		alert("Please select a rating");
+	}
 });
