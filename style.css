@@ -1,141 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 
 :root {
-    --white: hsl(0, 0%, 100%);
-    --lightgrey: hsl(217, 12%, 63%);
-    --mediumgrey: hsl(216, 12%, 54%);
-    --darkblue: hsl(213, 19%, 18%);
-    --verydarklue: hsl(216, 12%, 8%);
-    --faded: rgba(64, 73, 85, 0.5);
+	--white: hsl(0, 0%, 100%);
+	--lightgrey: hsl(217, 12%, 63%);
+	--mediumgrey: hsl(216, 12%, 54%);
+	--darkblue: hsl(213, 19%, 18%);
+	--verydarklue: hsl(216, 12%, 8%);
+	--faded: rgba(64, 73, 85, 0.5);
 }
 
 * {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 body {
-    background-color: var(--verydarklue);
+	background-color: var(--verydarklue);
+	display: grid;
+	height: 100vh;
+	place-content: center;
 }
 
 main {
-    background-color: var(--darkblue);
-    font-family: 'Overpass', sans-serif;
-    max-width: 350px;
-    display: flex;
-    max-height: 100vh;
-    place-content: center;
+	background-color: var(--darkblue);
+	font-family: "Overpass", sans-serif;
+	max-width: 350px;
+	display: flex;
+	max-height: 100vh;
+	place-content: center;
+	border-radius: 1rem;
 }
 
 .evaluation {
-    padding: 25px;
-    display: block;
-    
+	padding: 25px;
+	display: block;
 }
 
 .staricon {
-    background-color: var(--faded);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-image: url(images/icon-star.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    margin-bottom: 15px;
+	background-color: var(--faded);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-image: url(images/icon-star.svg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	margin-bottom: 15px;
 }
 
 .evaluation h1 {
-    color: white;
-    font-size: 26px;
-    font-weight: 600;
-    padding-bottom: 15px;
+	color: white;
+	font-size: 26px;
+	font-weight: 600;
+	padding-bottom: 15px;
 }
 
 .evaluation p {
-    color: var(--lightgrey);
-    font-size: 15px;
-    padding-bottom: 15px;
+	color: var(--lightgrey);
+	font-size: 15px;
+	padding-bottom: 15px;
 }
 
 .nums {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .num {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--faded);
-    color: var(--lightgrey);
-    font-weight: 600;
-    margin-bottom: 15px;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--faded);
+	color: var(--lightgrey);
+	font-weight: 600;
+	margin-bottom: 15px;
 }
 
 .submit {
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    border: none;
-    font-weight: 600;
-    background-color: hsl(25, 97%, 53%);
-    color: rgb(226, 215, 215);
-    letter-spacing: 2px;
-    
+	width: 100%;
+	height: 40px;
+	border-radius: 40px;
+	border: none;
+	font-weight: 600;
+	background-color: hsl(25, 97%, 53%);
+	color: rgb(226, 215, 215);
+	letter-spacing: 2px;
 }
 
 .thankyou {
-    padding: 25px;
-    display: grid;
-    place-items: center;
+	padding: 25px;
+	display: grid;
+	place-items: center;
 }
 
 .ill {
-    padding-left: 25%;
-    padding-right: 25%;
-    margin-bottom: 20px;
+	padding-left: 25%;
+	padding-right: 25%;
+	margin-bottom: 20px;
 }
 
 .thankyou h1 {
-    color: white;
-    font-weight: 600;
-    font-size: 25px;
-    padding-bottom: 15px;
+	color: white;
+	font-weight: 600;
+	font-size: 25px;
+	padding-bottom: 15px;
 }
 
 .para {
-    text-align: center;
-    color: var(--lightgrey);
-    font-size: 15px;
+	text-align: center;
+	color: var(--lightgrey);
+	font-size: 15px;
 }
 
 .selection {
-    background-color: var(--faded);
-    color: hsl(25, 97%, 53%);
-    text-align: center;
-    border-radius: 20px;
-    height: 30px;
-    width: 200px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 20px;
+	background-color: var(--faded);
+	color: hsl(25, 97%, 53%);
+	text-align: center;
+	border-radius: 20px;
+	height: 30px;
+	width: 200px;
+	display: grid;
+	place-items: center;
+	margin-bottom: 20px;
 }
 
 .num:hover {
-    background-color: var(--lightgrey);
-    color: white;
+	background-color: var(--lightgrey);
+	color: white;
 }
 
 .num:active {
-    background-color: hsl(25, 97%, 53%);
+	background-color: hsl(25, 97%, 53%);
 }
 
 .submit:hover {
-    background-color: white;
-    color: hsl(25, 97%, 53%);
+	background-color: white;
+	color: hsl(25, 97%, 53%);
 }
 
 .thankyou {
-    display: none;
+	display: none;
 }
